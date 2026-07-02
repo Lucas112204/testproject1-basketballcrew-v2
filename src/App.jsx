@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { HashRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { Home, Calendar, User } from 'lucide-react';
 import { supabase } from './utils/supabase';
 
@@ -45,7 +45,7 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="app-container">
         {!session ? (
           <Auth />
@@ -60,7 +60,7 @@ function App() {
           </>
         )}
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
